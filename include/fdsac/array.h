@@ -4,20 +4,20 @@
 #include <stddef.h>
 #include <stdint.h>
 
-typedef struct fd_array {
+typedef struct fds_array {
     uint8_t *data;
     size_t elemsize;
     size_t cap;
     size_t len;
-} fd_array;
+} fds_array;
 
-void fd_array_init(fd_array *array, size_t elemsize);
-void fd_array_init_with_cap(fd_array *array, size_t elemsize, size_t cap);
-void fd_array_destroy(fd_array *array);
+void fds_array_init(fds_array *array, size_t elemsize);
+void fds_array_init_with_cap(fds_array *array, size_t elemsize, size_t cap);
+void fds_array_destroy(fds_array *array);
 
-void fd_array_get(const fd_array *array, size_t index, void *elem);
-void fd_array_set(fd_array *array, size_t index, void *elem);
+void fds_array_get(const fds_array *array, size_t index, void *elem);
+void fds_array_set(fds_array *array, size_t index, void *elem);
 
-void fd_array_push(fd_array *array, void *elem);
+void fds_array_push(fds_array *array, void *elem);
 
 #endif
