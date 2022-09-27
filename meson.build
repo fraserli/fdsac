@@ -9,6 +9,7 @@ project(
 src = [
   'src/array.c',
   'src/list.c',
+  'src/set.c',
 ]
 
 inc = include_directories('include')
